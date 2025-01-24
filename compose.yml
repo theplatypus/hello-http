@@ -1,0 +1,8 @@
+services:
+  hello:
+    image: rg.fr-par.scw.cloud/mwi-hub/hello-http:${TAG:-test}
+    container_name: hello
+    env_file:
+      - ${TAG:-test}.env
+    expose:
+      - ${PORT:-"8080"}
